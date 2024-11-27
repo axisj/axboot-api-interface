@@ -1,0 +1,16 @@
+{
+  "name": "axboot-api-interface",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky",
+    "typecheck": "tsc --noEmit -p tsconfig.json --composite false"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "typescript": "^5.7.2"
+  }
+}

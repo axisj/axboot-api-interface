@@ -20,7 +20,4 @@ export interface GetMenuListMybatisResponse {
 export abstract class MenuInterface {
   /* 메뉴 목록(/api/menu) */
   abstract getMenuList(params: GetMenuListRequest): Promise<GetMenuListResponse>;
-
-  /* 메뉴 목록(mybatis)(/api/menu/mybatis) */
-  abstract getMenuListMybatis(params: GetMenuListMybatisRequest): Promise<GetMenuListMybatisResponse>;
 }

@@ -71,7 +71,7 @@ const getList = async () => {
   > dto : 데이터 전송 객체
   > interface : 인터페이스
   > types : 공토 타입
-  > mockup : 인터페이스에 대응되는 목업 Repository
+  > mock : 인터페이스에 대응되는 목업 Repository
 ```
 
 ## 3. 타입에러 체크

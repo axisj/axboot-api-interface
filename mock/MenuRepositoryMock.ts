@@ -1,5 +1,10 @@
 import { Menu } from "../dto";
-import {GetMenuListMybatisRequest, GetMenuListMybatisResponse, GetMenuListResponse, MenuInterface} from "../interface";
+import {
+  GetMenuListMybatisRequest,
+  GetMenuListMybatisResponse,
+  GetMenuListResponse,
+  MenuInterface,
+} from "../interface";
 
 interface MenuGroup extends Menu {
   userGroup?: string[];
@@ -118,19 +123,6 @@ export const menuMockData: MenuGroup[] = [
         menuGroupId: "SYSTEM",
         iconKncd: "Default",
         menuLvl: 2,
-        sortValue: 2,
-        progId: "USR_ORGANIZATION",
-        progNm: "조직관리",
-        children: [],
-        multiLang: {
-          ko: "조직관리",
-          en: "조직관리",
-        },
-      },
-      {
-        menuGroupId: "SYSTEM",
-        iconKncd: "Default",
-        menuLvl: 2,
         sortValue: 3,
         progId: "SYS_USER",
         progNm: "시스템사용자정보관리",
@@ -138,19 +130,6 @@ export const menuMockData: MenuGroup[] = [
         multiLang: {
           en: "System User",
           ko: "시스템사용자관리",
-        },
-      },
-      {
-        menuGroupId: "SYSTEM",
-        iconKncd: "Default",
-        menuLvl: 2,
-        sortValue: 4,
-        progId: "USR_USER_INFO",
-        progNm: "사용자부가정보관리",
-        children: [],
-        multiLang: {
-          ko: "사용자부가정보",
-          en: "사용자부가정보",
         },
       },
       {
@@ -190,19 +169,6 @@ export const menuMockData: MenuGroup[] = [
         multiLang: {
           en: "Menu Management",
           ko: "프로그램메뉴관리",
-        },
-      },
-      {
-        menuGroupId: "SYSTEM",
-        iconKncd: "Default",
-        menuLvl: 2,
-        sortValue: 9,
-        progId: "EXTRACT_DATA",
-        progNm: "데이터 추출",
-        children: [],
-        multiLang: {
-          ko: "데이터 추출",
-          en: "데이터 추출",
         },
       },
     ],

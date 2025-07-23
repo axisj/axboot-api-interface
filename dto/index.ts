@@ -33,3 +33,4 @@ export * from "./UserRole";
 export * from "./MenuGrp";
 export * from "./TypeYn";
 export * from "./DateCond";
+export * from "./UserMenu";

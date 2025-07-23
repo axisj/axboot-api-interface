@@ -17,8 +17,9 @@ import {
   PutSystemUserUpdateUserStatusAndSendOTPRequest,
   SystemUserInterface,
 } from "../interface";
+import { APIRepository } from "../types";
 
-export class SystemUserRepositoryMock implements SystemUserInterface {
+export class SystemUserRepositoryMock extends APIRepository implements SystemUserInterface {
   async postSystemUserUserLogin(params: PostSystemUserUserLoginRequest): Promise<void> {
     // await apiWrapper("post", "/api/system/user/login", params);
 

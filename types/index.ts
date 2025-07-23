@@ -1,6 +1,20 @@
-export interface ApiResponse {
-  result?: string;
-  msg?: string;
+import { AxiosRequestConfig, AxiosResponse } from "axios";
+
+export interface ApiRequestConfig extends AxiosRequestConfig {
+  tryTime?: number;
+  ignoreError?: boolean;
+}
+export type ApiMethod = "get" | "delete" | "head" | "post" | "put" | "patch" | "request";
+
+export type ApiWrapper = <P>(
+  method: ApiMethod,
+  route: string,
+  body?: any,
+  config?: ApiRequestConfig,
+) => Promise<ApiResponse<P>>;
+
+export interface ApiResponse<P> extends AxiosResponse {
+  data: P;
 }
 
 export interface ApiPageResponse {
@@ -8,6 +22,14 @@ export interface ApiPageResponse {
   totalCount: number;
   pageNumber: number;
   pageSize: number;
+}
+
+export class APIRepository {
+  _apiWrapper: ApiWrapper;
+
+  constructor(apiWrapper: ApiWrapper) {
+    this._apiWrapper = apiWrapper;
+  }
 }
 
 export interface DataGridPageResponse extends ApiPageResponse {
@@ -19,6 +41,12 @@ export type DtoItemStatus = "C" | "U" | "D";
 export interface DefaultDto {
   __status__?: DtoItemStatus;
   rowId?: string;
+  crtrId?: string;
+  crtrNm?: string;
+  creatDtm?: string;
+  upusrId?: string;
+  upusrNm?: string;
+  upddeDtm?: string;
 }
 
 export interface Option {

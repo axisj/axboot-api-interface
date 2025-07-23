@@ -4,8 +4,9 @@ import {
   PutSystemRoleSaveRequest,
   SystemRoleInterface,
 } from "../interface";
+import { APIRepository } from "../types";
 
-export class SystemRoleRepositoryMock implements SystemRoleInterface {
+export class SystemRoleRepositoryMock extends APIRepository implements SystemRoleInterface {
   async getSystemRoleList(params: GetSystemRoleListRequest): Promise<GetSystemRoleListResponse> {
     // const { data } = await apiWrapper<GetSystemRoleListResponse>("get", `/api/system/roles`, params);
     return {

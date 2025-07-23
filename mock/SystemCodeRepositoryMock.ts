@@ -4,8 +4,9 @@ import {
   PutSystemCodeSortRequest,
   SystemCodeInterface,
 } from "../interface";
+import { APIRepository } from "../types";
 
-export class SystemCodeRepositoryMock implements SystemCodeInterface {
+export class SystemCodeRepositoryMock extends APIRepository implements SystemCodeInterface {
   async putSystemCodeGroupSave(params: PutSystemCodeGroupSaveRequest): Promise<void> {
     // await apiWrapper("put", "/api/system/code/group", params);
     return;

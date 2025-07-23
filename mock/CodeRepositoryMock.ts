@@ -5,8 +5,9 @@ import {
   GetCodeListRequest,
   GetCodeListResponse,
 } from "../interface";
+import { APIRepository } from "../types";
 
-export class CodeRepositoryMock implements CodeInterface {
+export class CodeRepositoryMock extends APIRepository implements CodeInterface {
   async getCodeGroupList(params: GetCodeGroupListRequest): Promise<GetCodeGroupListResponse> {
     // const { data } = await apiWrapper<GetCodeGroupListResponse>("get", "/api/code/group", params);
 

@@ -4,8 +4,9 @@ import {
   PutSystemProgramSaveRequest,
   SystemProgramInterface,
 } from "../interface";
+import { APIRepository } from "../types";
 
-export class SystemProgramRepositoryMock implements SystemProgramInterface {
+export class SystemProgramRepositoryMock extends APIRepository implements SystemProgramInterface {
   async getSystemProgramList(params: GetSystemProgramListRequest): Promise<GetSystemProgramListResponse> {
     // const { data } = await apiWrapper<GetSystemProgramListResponse>("get", "/api/system/program", params);
 

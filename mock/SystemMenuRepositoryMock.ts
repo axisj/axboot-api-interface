@@ -4,8 +4,9 @@ import {
   PutSystemMenuSaveRequest,
   SystemMenuInterface,
 } from "../interface";
+import { APIRepository } from "../types";
 
-export class SystemMenuRepositoryMock implements SystemMenuInterface {
+export class SystemMenuRepositoryMock extends APIRepository implements SystemMenuInterface {
   async getSystemMenuRemove(params: GetSystemMenuRemoveRequest): Promise<void> {
     // await apiWrapper("get", `/api/system/menu/remove/${params.menuGrpCd}`);
   }

@@ -7,8 +7,9 @@ import {
   PutUserSaveWaitRequest,
   UserInterface,
 } from "../interface";
+import { APIRepository } from "../types";
 
-export class UserRepositoryMock implements UserInterface {
+export class UserRepositoryMock extends APIRepository implements UserInterface {
   async getUserProgram(params: GetUserProgramRequest): Promise<GetUserProgramResponse> {
     // const { data } = await apiWrapper<GetUserProgramResponse>("get", `/api/user/program`, params);
     return {

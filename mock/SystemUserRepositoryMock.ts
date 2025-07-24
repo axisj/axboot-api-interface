@@ -2,10 +2,17 @@ import { UserStat } from "../dto";
 import {
   GetSystemUserListRequest,
   GetSystemUserListResponse,
+  GetSystemUserLoginUsersRequest,
+  GetSystemUserLoginUsersResponse,
   GetSystemUserRolesRequest,
   GetSystemUserRolesResponse,
+  PostSystemUserListRequest,
+  PostSystemUserListResponse,
+  PostSystemUserSaveExcelRequest,
+  PostSystemUserSaveExcelResponse,
   PostSystemUserUserLoginRequest,
   PutSystemUserDeleteRequest,
+  PutSystemUserLogoutRequest,
   PutSystemUserPasswordMailRequest,
   PutSystemUserRemoveAuthRequest,
   PutSystemUserRemoveRoleRequest,
@@ -17,7 +24,7 @@ import {
   PutSystemUserUpdateUserStatusAndSendOTPRequest,
   SystemUserInterface,
 } from "../interface";
-import { APIRepository } from "../types";
+import { APIRepository, ApiRequestConfig } from "../types";
 
 export class SystemUserRepositoryMock extends APIRepository implements SystemUserInterface {
   async postSystemUserUserLogin(params: PostSystemUserUserLoginRequest): Promise<void> {
@@ -196,5 +203,43 @@ export class SystemUserRepositoryMock extends APIRepository implements SystemUse
         pageCount: 1,
       },
     };
+  }
+
+  async getSystemUserLoginUsers(
+    params: GetSystemUserLoginUsersRequest,
+    config?: ApiRequestConfig,
+  ): Promise<GetSystemUserLoginUsersResponse> {
+    return {
+      ds: [],
+      page: {
+        pageSize: 100,
+        pageNumber: 0,
+        endPageNo: 0,
+        totalCount: 0,
+        pageCount: 0,
+      },
+    };
+  }
+
+  async postSystemUserList(
+    params: PostSystemUserListRequest,
+    config?: ApiRequestConfig,
+  ): Promise<PostSystemUserListResponse> {
+    return {
+      rs: {},
+    };
+  }
+
+  async postSystemUserSaveExcel(
+    params: PostSystemUserSaveExcelRequest[],
+    config?: ApiRequestConfig,
+  ): Promise<PostSystemUserSaveExcelResponse> {
+    return {
+      ds: [],
+    };
+  }
+
+  async putSystemUserLogout(params: PutSystemUserLogoutRequest, config?: ApiRequestConfig): Promise<void> {
+    return;
   }
 }

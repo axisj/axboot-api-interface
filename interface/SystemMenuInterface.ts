@@ -1,14 +1,13 @@
-import { MenuRequest, MenuGrp } from "../dto";
+import { MenuRequest, MenuGrp, MenuReq } from "../dto";
 import { DataGridPageResponse } from "../types";
 
 export interface GetSystemMenuRemoveRequest {
   menuGrpCd: string;
 }
 
-export interface PutSystemMenuSaveRequest extends MenuRequest {}
+export interface PutSystemMenuSaveRequest extends MenuReq {}
 
 export interface PutSystemMenuSaveGroupRequest extends MenuGrp {}
-
 
 export abstract class SystemMenuInterface {
   /* 메뉴 그룹 삭제(/api/system/menu/remove/{menuGrpCd}) */

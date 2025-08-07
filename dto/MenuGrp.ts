@@ -11,4 +11,5 @@ export interface MenuGrp extends DefaultDto {
   upddeDtm?: string; //수정 일시
   updatedByNm?: string; //수정자 명
   useYn?: "Y" | "N"; //Y | N
+  userGroup?: string[];
 }

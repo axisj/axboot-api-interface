@@ -9,6 +9,7 @@ export interface GetSystemProgramListRequest {
 
 export interface PostSystemProgramListRoleRequest {
   roleId: string;
+  __status__: string;
 }
 
 export interface PostSystemProgramSaveProgRoleListRequest {

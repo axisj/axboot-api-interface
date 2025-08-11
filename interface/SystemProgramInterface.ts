@@ -13,9 +13,9 @@ export interface PostSystemProgramListRoleRequest {
 }
 
 export interface PostSystemProgramSaveProgRoleListRequest {
-  fnctAuthorInfoJson: string[];
-  roleId: string;
-  progId: string;
+  fnAuthInfo: string[];
+  userRole: string;
+  progCd: string;
 }
 
 export interface PutSystemProgramSaveRequest extends Prog {}

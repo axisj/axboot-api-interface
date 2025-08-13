@@ -6,7 +6,7 @@ export interface Prog extends DefaultDto {
   updatedBy?: string; //수정자
   progNm?: string; //프로그램 명
   fnctNmInfoJson?: FnTitleInfo[]; //기능
-  progCd?: string; //프로그램 코드
+  progId?: string; //프로그램 코드
   userGroup?: Record<string, any>; //사용자 그룹
   updatedByNm?: string; //수정자 명
   rmCtnts?: string; //비고

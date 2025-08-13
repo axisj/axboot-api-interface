@@ -5,7 +5,7 @@ export interface ProgRoleMenuRes extends DefaultDto {
   menuList?: ProgRoleMenu[]; //메뉴 목록
   progNm?: string; //프로그램명
   fnTitleInfo?: FnTitleInfo[]; //기능
-  progCd?: string; //프로그램ID
+  progId?: string; //프로그램ID
   userRole?: string; //역할 ID
   fnAuthInfo?: string[]; //기능 권한정보 JSON
 }

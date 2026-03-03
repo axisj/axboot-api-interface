@@ -12,14 +12,14 @@ interface MenuGroup extends Menu {
 export const menuMockData: MenuGroup[] = [
   {
     menuGroupId: "EXAMPLE",
-    multiLang: {
+    menuNmLang: {
       ko: "예제",
       en: "Examples",
     },
     iconKncd: "Example",
     children: [
       {
-        multiLang: {
+        menuNmLang: {
           en: "Forms",
           ko: "양식",
         },
@@ -28,7 +28,7 @@ export const menuMockData: MenuGroup[] = [
         children: [],
       },
       {
-        multiLang: {
+        menuNmLang: {
           en: "List",
           ko: "목록",
         },
@@ -37,7 +37,7 @@ export const menuMockData: MenuGroup[] = [
         children: [],
       },
       {
-        multiLang: {
+        menuNmLang: {
           en: "List & Drawer",
           ko: "목록과 서랍",
         },
@@ -46,7 +46,7 @@ export const menuMockData: MenuGroup[] = [
         children: [],
       },
       {
-        multiLang: {
+        menuNmLang: {
           en: "List & Modal",
           ko: "목록과 모달",
         },
@@ -55,7 +55,7 @@ export const menuMockData: MenuGroup[] = [
         children: [],
       },
       {
-        multiLang: {
+        menuNmLang: {
           en: "List & Form",
           ko: "목록과 양식",
         },
@@ -64,7 +64,7 @@ export const menuMockData: MenuGroup[] = [
         children: [],
       },
       {
-        multiLang: {
+        menuNmLang: {
           en: "List & Form & List",
           ko: "목록과 양식-목록",
         },
@@ -73,7 +73,7 @@ export const menuMockData: MenuGroup[] = [
         children: [],
       },
       {
-        multiLang: {
+        menuNmLang: {
           en: "List & List",
           ko: "목록과 목록",
         },
@@ -82,7 +82,7 @@ export const menuMockData: MenuGroup[] = [
         children: [],
       },
       {
-        multiLang: {
+        menuNmLang: {
           en: "Three List",
           ko: "3개 목록",
         },
@@ -91,7 +91,7 @@ export const menuMockData: MenuGroup[] = [
         children: [],
       },
       {
-        multiLang: {
+        menuNmLang: {
           en: "Stats",
           ko: "통계",
         },
@@ -114,7 +114,7 @@ export const menuMockData: MenuGroup[] = [
         progId: "SYS_COMMON_CODE",
         progNm: "공통코드관리",
         children: [],
-        multiLang: {
+        menuNmLang: {
           en: "Common Code",
           ko: "공통코드관리",
         },
@@ -127,7 +127,7 @@ export const menuMockData: MenuGroup[] = [
         progId: "SYS_USER",
         progNm: "시스템사용자정보관리",
         children: [],
-        multiLang: {
+        menuNmLang: {
           en: "System User",
           ko: "시스템사용자관리",
         },
@@ -140,7 +140,7 @@ export const menuMockData: MenuGroup[] = [
         progId: "SYS_USER_GROUP",
         progNm: "시스템사용자그룹관리",
         children: [],
-        multiLang: {
+        menuNmLang: {
           en: "System User Group",
           ko: "시스템사용자그룹",
         },
@@ -153,7 +153,7 @@ export const menuMockData: MenuGroup[] = [
         progId: "SYS_PROGRAM",
         progNm: "시스템프로그램관리",
         children: [],
-        multiLang: {
+        menuNmLang: {
           en: "Program",
           ko: "프로그램관리",
         },
@@ -166,14 +166,14 @@ export const menuMockData: MenuGroup[] = [
         progId: "SYS_MENU",
         progNm: "시스템메뉴관리",
         children: [],
-        multiLang: {
+        menuNmLang: {
           en: "Menu Management",
           ko: "프로그램메뉴관리",
         },
       },
     ],
     userGroup: ["ROLE_ADMIN"],
-    multiLang: {
+    menuNmLang: {
       ko: "시스템관리",
       en: "시스템관리",
     },
